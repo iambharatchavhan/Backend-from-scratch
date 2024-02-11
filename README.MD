@@ -82,7 +82,43 @@
  -for api versions
  ```javascript
 app.use("/api/v1", employeeRoute)
+
  ```
+ ```javascript
+const express = require('express')
+const app = express();
+require('dotenv').config()
+
+const port = process.env.PORT || 4000;
+
+
+app.use(express.json());
+
+const employeeRoute = require('./routes/EmployeeRoute');
+
+app.use("/api/v1", employeeRoute)
+
+
+app.listen(port,()=>{
+    console.log(`server is up and running on port ${port}`)
+})
+
+ ```
+
+ - connecting to dataBase
+
+ ## How File structure and codeFlow works
+   
+   - index.js <= mapped routes
+   - routes.js <= mapped with controller
+   - controller.js <= mapped with models
+   
+
+
+  ```javascript
+
+const DbConnect =
+  ```
 
 
 
