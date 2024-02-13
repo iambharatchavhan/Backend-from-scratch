@@ -18,4 +18,4 @@ app.listen(port,()=>{
 
 
 const DbConnect = require('./config/database')
-DbConnect()
+DbConnect();

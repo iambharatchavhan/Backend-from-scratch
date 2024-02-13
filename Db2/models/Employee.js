@@ -12,7 +12,7 @@ const employeeSchema = new mongoose.Schema(
       employeeRole:{
           type:String,
           required:true,
-          maxLength:50
+          maxLength:50  
       },
      employeeSalary:{
         type:Number,
