@@ -6,13 +6,14 @@
   - express
   - body-parser
   - nodemon
+  - dotenv
 
 # Database Week Two
 - Dependencies 
   - mongoDB
   - mongoose
   - nodemon
-  - .dotenv
+  - dotenv
 
 - Creating Folder Structure
   - Folders 
@@ -31,7 +32,7 @@
   - schemas and models
   - work: predefine schemas for object
 
-- controller
+- controller1 for post data into database
   - Each path has its own controller
   - work - create object and insert data into database
   - Steps Must follow -- async-await cos do not break main thread
@@ -40,8 +41,18 @@
     - creating a new object and insert into Database
     - send json response with status code 200
 
+- controller2 for get data from database
+   - importing model
+   - async function
+   - finding data from database using find method
+   - sending data in jason format
+
+
 
    - example of schema
+    - schema is nothing but the description of your database 
+    - blue print like sql table
+    
     ```javascript
     
   const mongoose = require('mongoose')
@@ -108,17 +119,13 @@ app.listen(port,()=>{
  - connecting to dataBase
 
  ## How File structure and codeFlow works
-   
-   - index.js <= mapped routes
-   - routes.js <= mapped with controller
-   - controller.js <= mapped with models
-   
 
+  1. create Database Connection in Config ==> call it in index.js
+  2. Create Schemas in Model Folder
+  3. Insert data in Database using Controller
+  4. Create Routes In Router using controller data
+  5. Consume Route in index.js
 
-  ```javascript
-
-const DbConnect =
-  ```
 
 
 
@@ -126,11 +133,16 @@ const DbConnect =
   must require to access environment
 
    ```javascript
-
    require("dotenv").config()
-
    ```  
 
+## Fetched All Data
+   - find method
 
+## Update Data By id  {id},{data,time:setDate}
+   - findByIdAndDelete
+
+## Delete Data By id
+  - findByIdAndDelete
 
  
