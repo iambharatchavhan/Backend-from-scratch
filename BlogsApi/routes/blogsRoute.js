@@ -1,12 +1,20 @@
 const express = require('express');
 const router = express.Router()
-const createPost = require('../controllers/createBlogs')
-const allBlogs = require('../controllers/findBlogs')
-const addComment = require('../controllers/addComments')
+
+// Import Routes
+
+const {createPost,findAllPost} = require('../controllers/postController')
+const addComment = require('../controllers/addComment')
+const {addLike,removeLike} = require('../controllers/likeUnlike')
+
+router.post('/create-post',createPost);
+router.post('/add-comment',addComment);
+router.post('/like-post',addLike);
+router.post('/unlike-post',removeLike);
+router.get('/get-all-posts',findAllPost);
 
 
-router.post('/create-blog/',createPost)
-router.get('/get-blogs/',allBlogs)
-router.put('/add-comments/:id/comment',addComment)
+
+
 
 module.exports = router;
