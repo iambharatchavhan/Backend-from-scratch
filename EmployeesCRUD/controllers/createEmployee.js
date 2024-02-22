@@ -4,6 +4,7 @@ exports.createEmployee = async (req, res) => {
   try {
     const { firstName, lastName, age,gender, salary } = req.body;
 
+    
     const data = await EmployeeData.create({
         firstName,
         lastName,

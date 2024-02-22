@@ -11,6 +11,6 @@ router.post('/create-employee', createEmployee)
 router.get('/employees',getAllEmployees)
 router.get('/getSingleEmployee/:id',getSingleEmployee)
 router.delete('/delete-employee/:id',deleteById)
-router.put('/update/:id',updateData)
+router.put('/update/:id',updateData)    
 
 module.exports = router

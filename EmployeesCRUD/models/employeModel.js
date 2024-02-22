@@ -12,6 +12,8 @@ const employeeSchema = new mongoose.Schema({
   },
   age: {
     type: Number,
+    min: 18, 
+    max: 60, 
     required: true,
   },
   gender: {
@@ -20,6 +22,8 @@ const employeeSchema = new mongoose.Schema({
   },
   salary: {
     type: Number,
+    min: 1, 
+    max: 20, 
     required: true,
   },
 createdAt:{
