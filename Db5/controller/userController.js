@@ -14,6 +14,7 @@ const createUser = async (req, res) => {
         message: "Email already exist try to login",
       });
     }
+    
     // hashed password using bcrypt round 10
 
     const hashedPassword = await bcrypt.hash(password, saltRound);
