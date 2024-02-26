@@ -19,6 +19,12 @@ const userSchema = new mongoose.Schema({
       required: true,
       trim: true,
     },
+    role:{
+      type:String,
+      require:true,
+      enum:["Admin","Student","Visitor"]
+
+    },
 
     createdAt: {
       type: Date,
