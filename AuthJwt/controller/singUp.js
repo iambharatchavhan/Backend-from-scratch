@@ -3,9 +3,9 @@ const bcrypt = require("bcrypt");
 
 const userSignUp = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password,role } = req.body;
     // check all details are filled properly
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !role) {
       res.status(401).json({
         success: false,
         message: "please fill the details properly",
@@ -28,6 +28,7 @@ const userSignUp = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      role
     });
 
     res.status(200).json({
