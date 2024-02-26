@@ -14,6 +14,7 @@
           -  timestamp of creation
 
 - create sing-up controller
+
     - fetch data from user form request ki body - name email password
     - check all details are filled 
     - check email is already registered
@@ -26,4 +27,19 @@
       - handle each error using status code 
 
 - create login controller
+   - fetch email and password from request ki body 
+   - check email and password filled properly
+     - if not send error response
+   - check user is registered with valid email id
+   - password
+     - decode password that fetched from DB and compare with entered password
+     - use bcrypt.compare function
+     - if all goes ok 
+
+     - create jwt token save into cookie or in header
+     - before sending user details 
+     - hide password 
+   
+
+
  
